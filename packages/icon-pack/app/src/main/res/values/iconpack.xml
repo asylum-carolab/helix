@@ -1,0 +1,5 @@
+<resources>
+    <string-array name="icon_pack">
+        <item>helix_phone</item><item>helix_messages</item><item>helix_camera</item><item>helix_chrome</item><item>helix_gmail</item>
+    </string-array>
+</resources>
