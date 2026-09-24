@@ -1,0 +1,8 @@
+<resources>
+    <!-- Temporary pilot aliases: replaced by final HELIX artwork after Theme Park compatibility is confirmed. -->
+    <item name="helix_phone" type="drawable">@drawable/helix_pack</item>
+    <item name="helix_messages" type="drawable">@drawable/helix_pack</item>
+    <item name="helix_camera" type="drawable">@drawable/helix_pack</item>
+    <item name="helix_chrome" type="drawable">@drawable/helix_pack</item>
+    <item name="helix_gmail" type="drawable">@drawable/helix_pack</item>
+</resources>
