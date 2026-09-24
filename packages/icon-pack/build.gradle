@@ -1,3 +1,42 @@
 plugins {
     id 'com.android.application' version '8.7.3' apply false
 }
+
+// Fail before packaging if the CSV, both appfilters or icon catalog drift apart.
+tasks.register('verifyPilotResources') {
+    doLast {
+        def main = file('app/src/main')
+        def parse = { String path -> new XmlParser().parse(new File(main, path)) }
+        def rows = file('app-map.csv').readLines('UTF-8').drop(1)
+            .findAll { !it.trim().isEmpty() }.collect { it.split(',', -1) }
+        assert rows.every { it.size() == 5 }: 'Expected five CSV columns'
+        assert rows.collect { it[0] }.toSet() == ['phone', 'messages', 'camera', 'chrome', 'gmail'].toSet()
+        assert rows.collect { it[2] }.toSet() == [
+            'com.samsung.android.dialer', 'com.samsung.android.messaging',
+            'com.sec.android.app.camera', 'com.android.chrome', 'com.google.android.gm'
+        ].toSet(): 'Only the five pilot packages are allowed'
+        def expected = rows.collectEntries { row ->
+            [("ComponentInfo{${row[2]}/${row[3]}}".toString()): row[4]]
+        }
+        assert expected.size() == rows.size(): 'Duplicate CSV component'
+        ['assets/appfilter.xml', 'res/xml/appfilter.xml'].each { path ->
+            def items = parse(path).item
+            assert items.size() == expected.size(): "Unexpected mapping count in ${path}"
+            assert items.collectEntries { [(it.@component.toString()): it.@drawable.toString()] } == expected
+        }
+        def icons = rows.collect { it[4] }.toSet()
+        def array = parse('res/values/iconpack.xml').'string-array'.find { it.@name == 'icon_pack' }
+        assert array.item.collect { it.text() }.toSet() == icons: 'icon_pack array drift'
+        ['res/xml/drawable.xml', 'assets/drawable.xml'].each { path ->
+            assert parse(path).item.collect { it.@drawable.toString() }.toSet() == icons: "Catalog drift: ${path}"
+        }
+        def aliases = parse('res/values/drawables.xml').item.collectEntries {
+            [(it.@name.toString()): it.text()]
+        }
+        assert aliases.keySet() == icons
+        assert aliases.values().every { it == '@drawable/helix_pack' }: 'Pilot uses one temporary drawable'
+        assert new File(main, 'res/drawable/helix_pack.xml').isFile()
+        assert parse('AndroidManifest.xml').'uses-permission'.isEmpty(): 'Pilot must request no permissions'
+        logger.lifecycle("HELIX pilot verified: ${icons.size()} icons, ${expected.size()} component mappings, no permissions.")
+    }
+}

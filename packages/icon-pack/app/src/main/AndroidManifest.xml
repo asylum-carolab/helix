@@ -1,7 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Visibility limited to the five apps used by the on-device pilot check. -->
+    <queries>
+        <package android:name="com.samsung.android.dialer"/>
+        <package android:name="com.samsung.android.messaging"/>
+        <package android:name="com.sec.android.app.camera"/>
+        <package android:name="com.android.chrome"/>
+        <package android:name="com.google.android.gm"/>
+    </queries>
     <application
         android:allowBackup="false"
-        android:label="HELIX Icon Pack"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:icon="@drawable/helix_pack">
         <activity android:name=".MainActivity" android:exported="true">

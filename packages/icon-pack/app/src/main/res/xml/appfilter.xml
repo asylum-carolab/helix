@@ -2,6 +2,7 @@
 <resources>
     <item component="ComponentInfo{com.samsung.android.dialer/com.samsung.android.dialer.DialtactsActivity}" drawable="helix_phone"/>
     <item component="ComponentInfo{com.samsung.android.messaging/com.samsung.android.messaging.ui.view.main.WithActivity}" drawable="helix_messages"/>
+    <item component="ComponentInfo{com.samsung.android.messaging/com.android.mms.ui.ConversationComposer}" drawable="helix_messages"/>
     <item component="ComponentInfo{com.sec.android.app.camera/com.sec.android.app.camera.Camera}" drawable="helix_camera"/>
     <item component="ComponentInfo{com.android.chrome/com.google.android.apps.chrome.Main}" drawable="helix_chrome"/>
     <item component="ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}" drawable="helix_gmail"/>

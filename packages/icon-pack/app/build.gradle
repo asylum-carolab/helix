@@ -3,6 +3,7 @@ plugins { id 'com.android.application' }
 android {
     namespace 'fr.carolab.helix.icons'
     compileSdk 35
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
         applicationId 'fr.carolab.helix.icons'
@@ -11,6 +12,26 @@ android {
         versionCode 1
         versionName '0.1.0-pilot'
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 }
 
 dependencies {}
+
+tasks.named('preBuild') {
+    dependsOn rootProject.tasks.named('verifyPilotResources')
+}
+
+// Export only after a successful assembly; keep the normal Gradle output as well.
+tasks.matching { it.name == 'assembleDebug' }.configureEach {
+    doLast {
+        copy {
+            from layout.buildDirectory.file('outputs/apk/debug/app-debug.apk')
+            into rootProject.file('..')
+            rename { 'HELIX-Icon-Pack-PILOT.apk' }
+        }
+    }
+}

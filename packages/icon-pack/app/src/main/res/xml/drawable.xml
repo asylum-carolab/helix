@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <category title="HELIX Pilot"/>
+    <item drawable="helix_phone"/>
+    <item drawable="helix_messages"/>
+    <item drawable="helix_camera"/>
+    <item drawable="helix_chrome"/>
+    <item drawable="helix_gmail"/>
+</resources>

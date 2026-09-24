@@ -1,6 +1,7 @@
 helix_key,label,package_name,component,asset
 phone,Phone,com.samsung.android.dialer,com.samsung.android.dialer.DialtactsActivity,helix_phone
 messages,Messages,com.samsung.android.messaging,com.samsung.android.messaging.ui.view.main.WithActivity,helix_messages
+messages,Messages,com.samsung.android.messaging,com.android.mms.ui.ConversationComposer,helix_messages
 camera,Camera,com.sec.android.app.camera,com.sec.android.app.camera.Camera,helix_camera
 chrome,Chrome,com.android.chrome,com.google.android.apps.chrome.Main,helix_chrome
 gmail,Gmail,com.google.android.gm,com.google.android.gm.ConversationListActivityGmail,helix_gmail
