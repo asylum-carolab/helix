@@ -1,0 +1,1036 @@
+{
+  "source_sha256": "6de73bc793e8542ec1f5107ada37bf7ab8330c61bca54069a6ee47570fbc9468",
+  "canvas": [
+    512,
+    512
+  ],
+  "method": "Reference-pixel extraction with identical common frame; individual proportional optical scaling and positioning; no generative redraw",
+  "icons": [
+    {
+      "key": "phone",
+      "source_box": [
+        61,
+        53,
+        157,
+        151
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        91,
+        95
+      ],
+      "target_long_edge": 286,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.01053,
+      "output_box": [
+        119,
+        110,
+        393,
+        396
+      ]
+    },
+    {
+      "key": "messages",
+      "source_box": [
+        250,
+        57,
+        342,
+        148
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        92,
+        90
+      ],
+      "target_long_edge": 284,
+      "offset": [
+        0,
+        3
+      ],
+      "scale": 3.08696,
+      "output_box": [
+        114,
+        117,
+        398,
+        395
+      ]
+    },
+    {
+      "key": "contacts",
+      "source_box": [
+        444,
+        55,
+        532,
+        148
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        86,
+        92
+      ],
+      "target_long_edge": 284,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.08696,
+      "output_box": [
+        124,
+        111,
+        389,
+        395
+      ]
+    },
+    {
+      "key": "calendar",
+      "source_box": [
+        630,
+        50,
+        723,
+        148
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        91,
+        98
+      ],
+      "target_long_edge": 286,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.91837,
+      "output_box": [
+        123,
+        110,
+        389,
+        396
+      ]
+    },
+    {
+      "key": "camera",
+      "source_box": [
+        815,
+        51,
+        913,
+        150
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        95,
+        98
+      ],
+      "target_long_edge": 289,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.94898,
+      "output_box": [
+        116,
+        108,
+        396,
+        397
+      ]
+    },
+    {
+      "key": "gallery",
+      "source_box": [
+        1006,
+        57,
+        1103,
+        148
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        95,
+        87
+      ],
+      "target_long_edge": 286,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.01053,
+      "output_box": [
+        113,
+        122,
+        399,
+        384
+      ]
+    },
+    {
+      "key": "files",
+      "source_box": [
+        1194,
+        61,
+        1288,
+        146
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        94,
+        83
+      ],
+      "target_long_edge": 279,
+      "offset": [
+        0,
+        2
+      ],
+      "scale": 2.96809,
+      "output_box": [
+        116,
+        132,
+        395,
+        378
+      ]
+    },
+    {
+      "key": "settings",
+      "source_box": [
+        1382,
+        55,
+        1477,
+        149
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        92,
+        92
+      ],
+      "target_long_edge": 285,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.09783,
+      "output_box": [
+        114,
+        110,
+        399,
+        395
+      ]
+    },
+    {
+      "key": "chrome",
+      "source_box": [
+        60,
+        246,
+        159,
+        345
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        98,
+        99
+      ],
+      "target_long_edge": 288,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.90909,
+      "output_box": [
+        114,
+        109,
+        399,
+        397
+      ]
+    },
+    {
+      "key": "google",
+      "source_box": [
+        252,
+        252,
+        341,
+        339
+      ],
+      "segmented_bounds": [
+        3,
+        0,
+        85,
+        87
+      ],
+      "target_long_edge": 276,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.17241,
+      "output_box": [
+        126,
+        115,
+        386,
+        391
+      ]
+    },
+    {
+      "key": "play_store",
+      "source_box": [
+        448,
+        246,
+        532,
+        345
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        81,
+        96
+      ],
+      "target_long_edge": 296,
+      "offset": [
+        6,
+        0
+      ],
+      "scale": 3.08333,
+      "output_box": [
+        137,
+        105,
+        387,
+        401
+      ]
+    },
+    {
+      "key": "youtube",
+      "source_box": [
+        630,
+        259,
+        723,
+        333
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        91,
+        74
+      ],
+      "target_long_edge": 285,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.13187,
+      "output_box": [
+        114,
+        137,
+        399,
+        369
+      ]
+    },
+    {
+      "key": "spotify",
+      "source_box": [
+        818,
+        256,
+        913,
+        339
+      ],
+      "segmented_bounds": [
+        1,
+        0,
+        90,
+        79
+      ],
+      "target_long_edge": 290,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.25843,
+      "output_box": [
+        111,
+        124,
+        401,
+        381
+      ]
+    },
+    {
+      "key": "tiktok",
+      "source_box": [
+        1011,
+        245,
+        1097,
+        348
+      ],
+      "segmented_bounds": [
+        1,
+        2,
+        85,
+        100
+      ],
+      "target_long_edge": 294,
+      "offset": [
+        1,
+        0
+      ],
+      "scale": 3.0,
+      "output_box": [
+        131,
+        106,
+        383,
+        400
+      ]
+    },
+    {
+      "key": "chatgpt",
+      "source_box": [
+        1195,
+        247,
+        1290,
+        345
+      ],
+      "segmented_bounds": [
+        0,
+        3,
+        90,
+        95
+      ],
+      "target_long_edge": 301,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.27174,
+      "output_box": [
+        109,
+        102,
+        403,
+        403
+      ]
+    },
+    {
+      "key": "gemini",
+      "source_box": [
+        1383,
+        246,
+        1477,
+        345
+      ],
+      "segmented_bounds": [
+        0,
+        4,
+        90,
+        95
+      ],
+      "target_long_edge": 308,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.38462,
+      "output_box": [
+        104,
+        99,
+        409,
+        407
+      ]
+    },
+    {
+      "key": "outlook",
+      "source_box": [
+        57,
+        443,
+        155,
+        538
+      ],
+      "segmented_bounds": [
+        1,
+        1,
+        97,
+        94
+      ],
+      "target_long_edge": 293,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.05208,
+      "output_box": [
+        110,
+        111,
+        403,
+        395
+      ]
+    },
+    {
+      "key": "gmail",
+      "source_box": [
+        249,
+        451,
+        343,
+        533
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        94,
+        80
+      ],
+      "target_long_edge": 281,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.98936,
+      "output_box": [
+        116,
+        134,
+        397,
+        373
+      ]
+    },
+    {
+      "key": "drive",
+      "source_box": [
+        438,
+        444,
+        535,
+        539
+      ],
+      "segmented_bounds": [
+        0,
+        1,
+        95,
+        92
+      ],
+      "target_long_edge": 292,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.07368,
+      "output_box": [
+        110,
+        113,
+        402,
+        393
+      ]
+    },
+    {
+      "key": "photos",
+      "source_box": [
+        628,
+        441,
+        724,
+        542
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        94,
+        98
+      ],
+      "target_long_edge": 294,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.0,
+      "output_box": [
+        115,
+        106,
+        397,
+        400
+      ]
+    },
+    {
+      "key": "maps",
+      "source_box": [
+        828,
+        441,
+        902,
+        540
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        70,
+        97
+      ],
+      "target_long_edge": 304,
+      "offset": [
+        0,
+        -2
+      ],
+      "scale": 3.13402,
+      "output_box": [
+        146,
+        99,
+        365,
+        403
+      ]
+    },
+    {
+      "key": "google_tv",
+      "source_box": [
+        1007,
+        454,
+        1096,
+        529
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        89,
+        73
+      ],
+      "target_long_edge": 295,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.31461,
+      "output_box": [
+        108,
+        132,
+        403,
+        374
+      ]
+    },
+    {
+      "key": "shazam",
+      "source_box": [
+        1196,
+        443,
+        1289,
+        541
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        92,
+        96
+      ],
+      "target_long_edge": 284,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.95833,
+      "output_box": [
+        120,
+        111,
+        392,
+        395
+      ]
+    },
+    {
+      "key": "youtube_music",
+      "source_box": [
+        1381,
+        442,
+        1480,
+        542
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        97,
+        98
+      ],
+      "target_long_edge": 287,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.92857,
+      "output_box": [
+        114,
+        110,
+        398,
+        397
+      ]
+    },
+    {
+      "key": "samsung_notes",
+      "source_box": [
+        59,
+        641,
+        148,
+        735
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        86,
+        91
+      ],
+      "target_long_edge": 286,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.14286,
+      "output_box": [
+        121,
+        110,
+        391,
+        396
+      ]
+    },
+    {
+      "key": "clock",
+      "source_box": [
+        249,
+        639,
+        346,
+        740
+      ],
+      "segmented_bounds": [
+        0,
+        2,
+        97,
+        101
+      ],
+      "target_long_edge": 303,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.06061,
+      "output_box": [
+        108,
+        102,
+        405,
+        405
+      ]
+    },
+    {
+      "key": "calculator",
+      "source_box": [
+        441,
+        639,
+        536,
+        738
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        92,
+        95
+      ],
+      "target_long_edge": 288,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.03158,
+      "output_box": [
+        116,
+        109,
+        395,
+        397
+      ]
+    },
+    {
+      "key": "bixby",
+      "source_box": [
+        632,
+        646,
+        719,
+        737
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        85,
+        87
+      ],
+      "target_long_edge": 280,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.21839,
+      "output_box": [
+        119,
+        113,
+        393,
+        393
+      ]
+    },
+    {
+      "key": "samsung_health",
+      "source_box": [
+        819,
+        640,
+        913,
+        739
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        86,
+        97
+      ],
+      "target_long_edge": 294,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.03093,
+      "output_box": [
+        126,
+        106,
+        387,
+        400
+      ]
+    },
+    {
+      "key": "galaxy_store",
+      "source_box": [
+        1010,
+        639,
+        1097,
+        740
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        84,
+        98
+      ],
+      "target_long_edge": 286,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.91837,
+      "output_box": [
+        134,
+        110,
+        379,
+        396
+      ]
+    },
+    {
+      "key": "good_lock",
+      "source_box": [
+        1198,
+        646,
+        1285,
+        735
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        84,
+        87
+      ],
+      "target_long_edge": 281,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.22989,
+      "output_box": [
+        120,
+        112,
+        391,
+        393
+      ]
+    },
+    {
+      "key": "samsung_members",
+      "source_box": [
+        1387,
+        650,
+        1473,
+        730
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        82,
+        78
+      ],
+      "target_long_edge": 285,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.47561,
+      "output_box": [
+        114,
+        118,
+        399,
+        389
+      ]
+    },
+    {
+      "key": "meet",
+      "source_box": [
+        59,
+        841,
+        157,
+        923
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        96,
+        82
+      ],
+      "target_long_edge": 282,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 2.9375,
+      "output_box": [
+        115,
+        132,
+        397,
+        373
+      ]
+    },
+    {
+      "key": "vlc",
+      "source_box": [
+        441,
+        831,
+        536,
+        931
+      ],
+      "segmented_bounds": [
+        0,
+        2,
+        90,
+        97
+      ],
+      "target_long_edge": 302,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.17895,
+      "output_box": [
+        113,
+        102,
+        399,
+        404
+      ]
+    },
+    {
+      "key": "linkedin",
+      "source_box": [
+        632,
+        838,
+        714,
+        925
+      ],
+      "segmented_bounds": [
+        0,
+        0,
+        82,
+        84
+      ],
+      "target_long_edge": 282,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.35714,
+      "output_box": [
+        118,
+        112,
+        393,
+        394
+      ]
+    },
+    {
+      "key": "alexa",
+      "source_box": [
+        812,
+        842,
+        915,
+        924
+      ],
+      "segmented_bounds": [
+        4,
+        0,
+        101,
+        76
+      ],
+      "target_long_edge": 302,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.1134,
+      "output_box": [
+        105,
+        134,
+        407,
+        371
+      ]
+    },
+    {
+      "key": "leboncoin",
+      "source_box": [
+        1205,
+        844,
+        1284,
+        925
+      ],
+      "segmented_bounds": [
+        0,
+        1,
+        73,
+        78
+      ],
+      "target_long_edge": 272,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.53247,
+      "output_box": [
+        127,
+        117,
+        385,
+        389
+      ]
+    },
+    {
+      "key": "icon_pack_studio",
+      "source_box": [
+        1382,
+        837,
+        1480,
+        930
+      ],
+      "segmented_bounds": [
+        3,
+        0,
+        92,
+        89
+      ],
+      "target_long_edge": 300,
+      "offset": [
+        0,
+        0
+      ],
+      "scale": 3.37079,
+      "output_box": [
+        106,
+        103,
+        406,
+        403
+      ]
+    }
+  ]
+}

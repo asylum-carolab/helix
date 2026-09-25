@@ -1,42 +1,53 @@
+import groovy.json.JsonSlurper
+import javax.imageio.ImageIO
+
 plugins {
     id 'com.android.application' version '8.7.3' apply false
 }
 
-// Fail before packaging if the CSV, both appfilters or icon catalog drift apart.
-tasks.register('verifyPilotResources') {
+tasks.register('verifyIconResources') {
     doLast {
         def main = file('app/src/main')
         def parse = { String path -> new XmlParser().parse(new File(main, path)) }
+        def catalog = new JsonSlurper().parse(file('catalog.json'))
+        def icons = catalog.collect { it.asset }.toSet()
+        assert catalog.size() == 38 && icons.size() == 38: 'Expected exactly 38 distinct icons'
+        assert !catalog.any { it.key in ['creative_studio', 'bus_traffic_fever'] }
         def rows = file('app-map.csv').readLines('UTF-8').drop(1)
             .findAll { !it.trim().isEmpty() }.collect { it.split(',', -1) }
         assert rows.every { it.size() == 5 }: 'Expected five CSV columns'
-        assert rows.collect { it[0] }.toSet() == ['phone', 'messages', 'camera', 'chrome', 'gmail'].toSet()
-        assert rows.collect { it[2] }.toSet() == [
-            'com.samsung.android.dialer', 'com.samsung.android.messaging',
-            'com.sec.android.app.camera', 'com.android.chrome', 'com.google.android.gm'
-        ].toSet(): 'Only the five pilot packages are allowed'
+        assert rows.collect { it[0] }.toSet() == catalog.collect { it.key }.toSet()
+        assert rows.collect { it[4] }.toSet() == icons
+        assert rows.every { row -> catalog.any { it.key == row[0] && it.package == row[2] && it.asset == row[4] } }
         def expected = rows.collectEntries { row ->
             [("ComponentInfo{${row[2]}/${row[3]}}".toString()): row[4]]
         }
         assert expected.size() == rows.size(): 'Duplicate CSV component'
+        def evidence = new JsonSlurper().parse(file('mapping-evidence.json'))
+        assert evidence.mappings.collectEntries {
+            [("ComponentInfo{${it.package_name}/${it.component}}".toString()): it.asset]
+        } == expected: 'Every mapping must have recorded evidence'
         ['assets/appfilter.xml', 'res/xml/appfilter.xml'].each { path ->
             def items = parse(path).item
-            assert items.size() == expected.size(): "Unexpected mapping count in ${path}"
+            assert items.size() == expected.size(): "Mapping count drift: ${path}"
             assert items.collectEntries { [(it.@component.toString()): it.@drawable.toString()] } == expected
         }
-        def icons = rows.collect { it[4] }.toSet()
         def array = parse('res/values/iconpack.xml').'string-array'.find { it.@name == 'icon_pack' }
-        assert array.item.collect { it.text() }.toSet() == icons: 'icon_pack array drift'
+        assert array.item.size() == 38 && array.item.collect { it.text() }.toSet() == icons
         ['res/xml/drawable.xml', 'assets/drawable.xml'].each { path ->
-            assert parse(path).item.collect { it.@drawable.toString() }.toSet() == icons: "Catalog drift: ${path}"
+            def entries = parse(path).item
+            assert entries.size() == 38 && entries.collect { it.@drawable.toString() }.toSet() == icons
         }
-        def aliases = parse('res/values/drawables.xml').item.collectEntries {
-            [(it.@name.toString()): it.text()]
+        assert parse('res/values/drawables.xml').item.isEmpty(): 'No pilot aliases may shadow PNGs'
+        assert fileTree(new File(main, 'res/drawable-nodpi')).matching { include '*.png' }.files.size() == 38
+        icons.each { name ->
+            def png = ImageIO.read(new File(main, "res/drawable-nodpi/${name}.png"))
+            assert png != null && png.width == 512 && png.height == 512 && png.colorModel.hasAlpha(): "Invalid PNG: ${name}"
         }
-        assert aliases.keySet() == icons
-        assert aliases.values().every { it == '@drawable/helix_pack' }: 'Pilot uses one temporary drawable'
-        assert new File(main, 'res/drawable/helix_pack.xml').isFile()
-        assert parse('AndroidManifest.xml').'uses-permission'.isEmpty(): 'Pilot must request no permissions'
-        logger.lifecycle("HELIX pilot verified: ${icons.size()} icons, ${expected.size()} component mappings, no permissions.")
+        def manifest = parse('AndroidManifest.xml')
+        assert manifest.'uses-permission'.isEmpty(): 'Pack must request no permissions'
+        def androidName = '{http://schemas.android.com/apk/res/android}name'
+        assert manifest.queries.'package'.collect { it.attributes().find { key, value -> key.toString() == androidName }?.value }.toSet() == catalog.collect { it.package }.toSet()
+        logger.lifecycle("HELIX verified: 38 RGBA icons, ${expected.size()} evidenced mappings, no permissions.")
     }
 }

@@ -1,11 +1,44 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Visibility limited to the five apps used by the on-device pilot check. -->
+    <!-- Visibility limited to the 38 requested application packages. -->
     <queries>
-        <package android:name="com.samsung.android.dialer"/>
-        <package android:name="com.samsung.android.messaging"/>
-        <package android:name="com.sec.android.app.camera"/>
+        <package android:name="com.amazon.dee.app"/>
         <package android:name="com.android.chrome"/>
+        <package android:name="com.android.settings"/>
+        <package android:name="com.android.vending"/>
+        <package android:name="com.google.android.apps.bard"/>
+        <package android:name="com.google.android.apps.docs"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.google.android.apps.photos"/>
+        <package android:name="com.google.android.apps.tachyon"/>
+        <package android:name="com.google.android.apps.youtube.music"/>
         <package android:name="com.google.android.gm"/>
+        <package android:name="com.google.android.googlequicksearchbox"/>
+        <package android:name="com.google.android.videos"/>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.linkedin.android"/>
+        <package android:name="com.microsoft.office.outlook"/>
+        <package android:name="com.openai.chatgpt"/>
+        <package android:name="com.samsung.android.app.notes"/>
+        <package android:name="com.samsung.android.bixby.agent"/>
+        <package android:name="com.samsung.android.calendar"/>
+        <package android:name="com.samsung.android.contacts"/>
+        <package android:name="com.samsung.android.dialer"/>
+        <package android:name="com.samsung.android.goodlock"/>
+        <package android:name="com.samsung.android.messaging"/>
+        <package android:name="com.samsung.android.voc"/>
+        <package android:name="com.sec.android.app.camera"/>
+        <package android:name="com.sec.android.app.clockpackage"/>
+        <package android:name="com.sec.android.app.myfiles"/>
+        <package android:name="com.sec.android.app.popupcalculator"/>
+        <package android:name="com.sec.android.app.samsungapps"/>
+        <package android:name="com.sec.android.app.shealth"/>
+        <package android:name="com.sec.android.gallery3d"/>
+        <package android:name="com.shazam.android"/>
+        <package android:name="com.spotify.music"/>
+        <package android:name="com.zhiliaoapp.musically"/>
+        <package android:name="fr.leboncoin"/>
+        <package android:name="ginlemon.iconpackstudio"/>
+        <package android:name="org.videolan.vlc"/>
     </queries>
     <application
         android:allowBackup="false"

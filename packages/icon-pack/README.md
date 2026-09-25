@@ -1,30 +1,13 @@
-# HELIX Icon Pack
+# HELIX Icon Pack — ICONS01
 
-Android icon-pack source for the HELIX interface.
+Projet Android existant, maintenant doté de 38 icônes extraites de la grille HELIX validée. Studio création et Bus Traffic Fever! sont exclus de cette version.
 
-## Goal
+- Catalogue : `catalog.json`.
+- Correspondances : `app-map.csv` et `mapping-evidence.json`.
+- PNG : `app/src/main/res/drawable-nodpi/`.
+- Préparation graphique et XML : `tools/`.
+- Contrôle visuel et paramètres optiques : `../../icons/helix-icons01/`.
 
-Build one installable APK that can be selected from Samsung Theme Park as a third-party icon pack.
+Depuis ce dossier : `./gradlew assembleDebug lintDebug` (Windows : `.\gradlew.bat assembleDebug lintDebug`). L’APK est exporté vers `../HELIX-Icon-Pack-ICONS01-38.apk`. Le pilote `../HELIX-Icon-Pack-PILOT.apk` est conservé.
 
-## Visual master
-
-- graphite / near-black rounded tile
-- subtle relief and angular technical paneling
-- cyan-blue luminous rim
-- cyan highlight near the top-left
-- restrained amber accent near the bottom-right
-- original app identity remains immediately recognizable
-
-## Pilot
-
-The first compatibility build targets a small core set before expanding to the complete HELIX catalog:
-
-- Phone
-- Messages
-- Camera
-- Chrome
-- Gmail
-
-Mappings live in `app-map.csv`.
-
-The final PNG assets will be stored under `icons/` and copied into the Android drawable resources during the build.
+Consulter [le guide du pack](../../docs/ICON-PACK.md) pour les prérequis, la compilation, l’installation et le test Theme Park. La compatibilité sur le S24 physique n’est pas encore validée.

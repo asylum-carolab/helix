@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">HELIX Icon Pack</string>
-    <string name="pilot_title">HELIX // ICON PACK — Pilot 0.1</string>
-    <string name="pilot_instructions">Ouvrez Good Lock → Theme Park → Icon → Create new → Iconpack → Third Party Icon Packs → HELIX Icon Pack.\n\nLes cinq applications utilisent volontairement la même icône H. La détection et l’application dans Theme Park restent à tester sur ce téléphone.</string>
+    <string name="pilot_title">HELIX // ICON PACK — ICONS01 — 38 icônes</string>
+    <string name="pilot_instructions">Ouvrez Good Lock → Theme Park → Icon → Create new → Iconpack → Third Party Icon Packs → HELIX Icon Pack.\n\nLes 38 icônes utilisent les dessins HELIX validés. La détection et l’application dans Theme Park restent à tester sur ce téléphone.</string>
     <string name="diagnostic_title">Vérification locale des correspondances</string>
     <string name="mapping_found">Correspondance présente</string>
     <string name="mapping_missing">Correspondance absente — transmettre ce composant</string>
     <string name="app_unavailable">Aucune activité de lancement visible : application absente ou désactivée</string>
-    <string name="resource_error">Impossible de lire les ressources du pilote : %1$s</string>
+    <string name="resource_error">Impossible de lire les ressources du pack : %1$s</string>
 </resources>

@@ -1,5 +1,42 @@
 <resources>
     <string-array name="icon_pack">
-        <item>helix_phone</item><item>helix_messages</item><item>helix_camera</item><item>helix_chrome</item><item>helix_gmail</item>
+        <item>helix_phone</item>
+        <item>helix_messages</item>
+        <item>helix_contacts</item>
+        <item>helix_calendar</item>
+        <item>helix_camera</item>
+        <item>helix_gallery</item>
+        <item>helix_files</item>
+        <item>helix_settings</item>
+        <item>helix_chrome</item>
+        <item>helix_google</item>
+        <item>helix_play_store</item>
+        <item>helix_youtube</item>
+        <item>helix_spotify</item>
+        <item>helix_tiktok</item>
+        <item>helix_chatgpt</item>
+        <item>helix_gemini</item>
+        <item>helix_outlook</item>
+        <item>helix_gmail</item>
+        <item>helix_drive</item>
+        <item>helix_photos</item>
+        <item>helix_maps</item>
+        <item>helix_google_tv</item>
+        <item>helix_shazam</item>
+        <item>helix_youtube_music</item>
+        <item>helix_samsung_notes</item>
+        <item>helix_clock</item>
+        <item>helix_calculator</item>
+        <item>helix_bixby</item>
+        <item>helix_samsung_health</item>
+        <item>helix_galaxy_store</item>
+        <item>helix_good_lock</item>
+        <item>helix_samsung_members</item>
+        <item>helix_meet</item>
+        <item>helix_vlc</item>
+        <item>helix_linkedin</item>
+        <item>helix_alexa</item>
+        <item>helix_leboncoin</item>
+        <item>helix_icon_pack_studio</item>
     </string-array>
 </resources>

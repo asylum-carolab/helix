@@ -9,8 +9,8 @@ android {
         applicationId 'fr.carolab.helix.icons'
         minSdk 26
         targetSdk 35
-        versionCode 1
-        versionName '0.1.0-pilot'
+        versionCode 2
+        versionName '0.2.0-icons01'
     }
 
     compileOptions {
@@ -22,7 +22,7 @@ android {
 dependencies {}
 
 tasks.named('preBuild') {
-    dependsOn rootProject.tasks.named('verifyPilotResources')
+    dependsOn rootProject.tasks.named('verifyIconResources')
 }
 
 // Export only after a successful assembly; keep the normal Gradle output as well.
@@ -31,7 +31,7 @@ tasks.matching { it.name == 'assembleDebug' }.configureEach {
         copy {
             from layout.buildDirectory.file('outputs/apk/debug/app-debug.apk')
             into rootProject.file('..')
-            rename { 'HELIX-Icon-Pack-PILOT.apk' }
+            rename { 'HELIX-Icon-Pack-ICONS01-38.apk' }
         }
     }
 }

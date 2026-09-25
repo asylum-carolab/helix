@@ -1,0 +1,579 @@
+{
+  "icon_count": 38,
+  "unique_count": 38,
+  "frame_border_identical": true,
+  "transparent_corners": true,
+  "safe_glyph_bounds": true,
+  "icons": [
+    {
+      "asset": "helix_phone",
+      "sha256": "aa4013ff8597c6cabdf1faf87cd836cbad053ba953a197a5be6b35dc96b56b58",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        119,
+        110,
+        393,
+        396
+      ]
+    },
+    {
+      "asset": "helix_messages",
+      "sha256": "7eb1d4fb46c496864663da87c05d413ea84d34c0b9b6d632b198149aef5c3b35",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        114,
+        117,
+        398,
+        395
+      ]
+    },
+    {
+      "asset": "helix_contacts",
+      "sha256": "48398f3a6bf4a4b24e52a0eed30a5daa2cbf881d8002f66a0512d02b373b79ae",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        124,
+        111,
+        389,
+        395
+      ]
+    },
+    {
+      "asset": "helix_calendar",
+      "sha256": "0627354a49575978c1271a3d53e8419d038c6126e82341ba2e57e93154e9e4c3",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        123,
+        110,
+        389,
+        396
+      ]
+    },
+    {
+      "asset": "helix_camera",
+      "sha256": "875cbd463cefe63d4f6591e3bb6897b7231687c846f1695baedc57125a6769ca",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        116,
+        108,
+        396,
+        397
+      ]
+    },
+    {
+      "asset": "helix_gallery",
+      "sha256": "910f928251595b7221469b2e7697ad8b58c35b69e883411ae289f43c387dedeb",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        113,
+        122,
+        399,
+        384
+      ]
+    },
+    {
+      "asset": "helix_files",
+      "sha256": "ead7936d0b7d770ac50baef7cd5636c6663ff7b3de70797c3fead94b67eef0d2",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        116,
+        132,
+        395,
+        378
+      ]
+    },
+    {
+      "asset": "helix_settings",
+      "sha256": "38262d17165cc64397a186c58ba804eecbce1c47fd68bf7064ff4b50343bcea6",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        114,
+        110,
+        399,
+        395
+      ]
+    },
+    {
+      "asset": "helix_chrome",
+      "sha256": "12bb27e6878b99ef61e5dd2c2a62cb41f6e00d4446e9d0f82707a2900cec6217",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        114,
+        109,
+        399,
+        397
+      ]
+    },
+    {
+      "asset": "helix_google",
+      "sha256": "98a05cc1ff423bcfc9ac947321dca2e74f41a183409a3039a4015c4811672c3f",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        126,
+        115,
+        386,
+        391
+      ]
+    },
+    {
+      "asset": "helix_play_store",
+      "sha256": "197ee676520804ceff3ed3a171dcbc568c090a060ccb1769ae8d3a13726bafe8",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        137,
+        105,
+        387,
+        401
+      ]
+    },
+    {
+      "asset": "helix_youtube",
+      "sha256": "db1d66592554fe84b61f57ca7ec006b74370493bf337d8ebc317025398084680",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        114,
+        137,
+        399,
+        369
+      ]
+    },
+    {
+      "asset": "helix_spotify",
+      "sha256": "bbbfde319fe9f1fae06ef225c4e10ee4613ea6e533584a941891fc08e1d23018",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        111,
+        124,
+        401,
+        381
+      ]
+    },
+    {
+      "asset": "helix_tiktok",
+      "sha256": "df43bc81f34de98db37cd121d01be993d684680d1d1ec43bfaf353021b1536c8",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        131,
+        106,
+        383,
+        400
+      ]
+    },
+    {
+      "asset": "helix_chatgpt",
+      "sha256": "00e9236c3c096db7f98d5302eae7a458173e6fc286c6bbe0e82b28240b8a723a",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        109,
+        102,
+        403,
+        403
+      ]
+    },
+    {
+      "asset": "helix_gemini",
+      "sha256": "cc1453d1184afd880ad67868c7fd0bbf534d290688a68a435988584e7ee4b21e",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        104,
+        99,
+        409,
+        407
+      ]
+    },
+    {
+      "asset": "helix_outlook",
+      "sha256": "387525644afe6ef27a8cb812442263687fda0eb14b6cd32e88cbf88c709a1c34",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        110,
+        111,
+        403,
+        395
+      ]
+    },
+    {
+      "asset": "helix_gmail",
+      "sha256": "8f82f768e76461423f9e754e40a7591769d9b2352714b2c5071d12d7b618041a",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        116,
+        134,
+        397,
+        373
+      ]
+    },
+    {
+      "asset": "helix_drive",
+      "sha256": "7303781fa83a4ef757d941cb36b1bae85f7d39a3c51bc64a866ad420c2451443",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        110,
+        113,
+        402,
+        393
+      ]
+    },
+    {
+      "asset": "helix_photos",
+      "sha256": "a7051830b06cb5af027530b89b7fa8be17aa34a5eff0d6d6703610a077c41c1c",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        115,
+        106,
+        397,
+        400
+      ]
+    },
+    {
+      "asset": "helix_maps",
+      "sha256": "4472f4ff6bb2637989b0b900fb65631415116ded64d3f55f241632a16caa1a9c",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        146,
+        99,
+        365,
+        403
+      ]
+    },
+    {
+      "asset": "helix_google_tv",
+      "sha256": "a824145cfd3e38d1574c7577d092b7a9271b52afe304d358b56ff8fa022c87ac",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        108,
+        132,
+        403,
+        374
+      ]
+    },
+    {
+      "asset": "helix_shazam",
+      "sha256": "60fc5cc080e200cce88ca3a9b785d255b72e5144824c4090171bf81b0ff6a15c",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        120,
+        111,
+        392,
+        395
+      ]
+    },
+    {
+      "asset": "helix_youtube_music",
+      "sha256": "11217ef33bf03fc9c00094f3e4567b0d452625109bc473da293ce08e052d42af",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        114,
+        110,
+        398,
+        397
+      ]
+    },
+    {
+      "asset": "helix_samsung_notes",
+      "sha256": "42f4317dcd14cb809d6905e5dc8d31426edfc04ea0443a328e5d077c354dfa71",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        121,
+        110,
+        391,
+        396
+      ]
+    },
+    {
+      "asset": "helix_clock",
+      "sha256": "89eed5ec179aa624791ed6b30438828df3eb9fe3b867b633c7014a4f70b8aad5",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        108,
+        102,
+        405,
+        405
+      ]
+    },
+    {
+      "asset": "helix_calculator",
+      "sha256": "75f3cfb8f89255e34bf3b73509bc6bf142d8de2ea5ddea5b2d54142b8f97dfde",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        116,
+        109,
+        395,
+        397
+      ]
+    },
+    {
+      "asset": "helix_bixby",
+      "sha256": "69ab7fa75e9ae27430d2a039d0a877c1e356d4cbe8c5d4e3f1961ff6b7443b7a",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        119,
+        113,
+        393,
+        393
+      ]
+    },
+    {
+      "asset": "helix_samsung_health",
+      "sha256": "9ca5397fba1bb635424239f3ffc223862cf5472906db4bf33f60128961e675c8",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        126,
+        106,
+        387,
+        400
+      ]
+    },
+    {
+      "asset": "helix_galaxy_store",
+      "sha256": "4223d7d8fa93cd2fe84a61ba07bd66ea89e6b52e7a4518e671237576268428a0",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        134,
+        110,
+        379,
+        396
+      ]
+    },
+    {
+      "asset": "helix_good_lock",
+      "sha256": "7a43afb5f4769c4baa4e4aef6df23e8a989d6b43b9b0f64da8a54ab824713476",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        120,
+        112,
+        391,
+        393
+      ]
+    },
+    {
+      "asset": "helix_samsung_members",
+      "sha256": "9a41ec6ac67acc4b4f40a7ad588f94e989504b72d5c8ebb921beccc993d9afc6",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        114,
+        118,
+        399,
+        389
+      ]
+    },
+    {
+      "asset": "helix_meet",
+      "sha256": "673961d3903b08987df273867fda9d2a7bac0985f931de62542e9aefe0a19d5c",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        115,
+        132,
+        397,
+        373
+      ]
+    },
+    {
+      "asset": "helix_vlc",
+      "sha256": "7c6d397b26f29964d27f0c36945889fa78e55211268474999d2dfce27ff3ec5f",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        113,
+        102,
+        399,
+        404
+      ]
+    },
+    {
+      "asset": "helix_linkedin",
+      "sha256": "4e094d098a57f2a41341709d7e1513275635e6ec2e51b1fcf6abdc45753ccc68",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        118,
+        112,
+        393,
+        394
+      ]
+    },
+    {
+      "asset": "helix_alexa",
+      "sha256": "ef336cf0718ea87d7ca19ed07fe0e7776218f0290d5c5f0a912dd791f5b427e9",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        105,
+        134,
+        407,
+        371
+      ]
+    },
+    {
+      "asset": "helix_leboncoin",
+      "sha256": "88c46a40248d22766e1410ea1c197fcdb358f5bd81fa30fa0d6accc3e7aaa264",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        127,
+        117,
+        385,
+        389
+      ]
+    },
+    {
+      "asset": "helix_icon_pack_studio",
+      "sha256": "012c7a1b054aa4d9b2691b7b70c974eac7ce70cd5a78b5278fe5e610924057d9",
+      "frame_identical": true,
+      "canvas": [
+        512,
+        512
+      ],
+      "glyph_box": [
+        106,
+        103,
+        406,
+        403
+      ]
+    }
+  ]
+}

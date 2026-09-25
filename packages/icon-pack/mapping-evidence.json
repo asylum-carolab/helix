@@ -1,0 +1,395 @@
+{
+  "source": "https://github.com/Arcticons-Team/Arcticons/blob/main/app/src/main/res/xml/appfilter.xml",
+  "retrieved": "2026-09-25",
+  "source_sha256": "a82a417110f717c63df946c3153c647a4923f931fdbbedfea92112d06d5bd1c0",
+  "status": "Corroborated by public icon-pack source; physical S24 launch components not yet tested",
+  "mappings": [
+    {
+      "package_name": "com.samsung.android.dialer",
+      "component": "com.samsung.android.dialer.DialtactsActivity",
+      "asset": "helix_phone"
+    },
+    {
+      "package_name": "com.samsung.android.messaging",
+      "component": "com.android.mms.ui.ConversationComposer",
+      "asset": "helix_messages"
+    },
+    {
+      "package_name": "com.samsung.android.messaging",
+      "component": "com.samsung.android.messaging.ui.ConversationListActivity",
+      "asset": "helix_messages"
+    },
+    {
+      "package_name": "com.samsung.android.messaging",
+      "component": "com.samsung.android.messaging.ui.ConversationList",
+      "asset": "helix_messages"
+    },
+    {
+      "package_name": "com.samsung.android.contacts",
+      "component": "com.android.contacts.activities.PeopleActivity",
+      "asset": "helix_contacts"
+    },
+    {
+      "package_name": "com.samsung.android.contacts",
+      "component": "com.samsung.android.contacts.contactslist.PeopleActivity",
+      "asset": "helix_contacts"
+    },
+    {
+      "package_name": "com.samsung.android.calendar",
+      "component": "com.android.calendar.AllInOneActivity",
+      "asset": "helix_calendar"
+    },
+    {
+      "package_name": "com.samsung.android.calendar",
+      "component": "com.samsung.android.app.calendar.activity.MainActivity",
+      "asset": "helix_calendar"
+    },
+    {
+      "package_name": "com.sec.android.app.camera",
+      "component": "com.sec.android.app.camera.Camera",
+      "asset": "helix_camera"
+    },
+    {
+      "package_name": "com.sec.android.gallery3d",
+      "component": "com.sec.android.gallery3d.app.GalleryOpaqueActivity",
+      "asset": "helix_gallery"
+    },
+    {
+      "package_name": "com.sec.android.gallery3d",
+      "component": "com.samsung.android.gallery.app.activity.GalleryActivity",
+      "asset": "helix_gallery"
+    },
+    {
+      "package_name": "com.sec.android.app.myfiles",
+      "component": "com.sec.android.app.myfiles.external.ui.MainActivity",
+      "asset": "helix_files"
+    },
+    {
+      "package_name": "com.sec.android.app.myfiles",
+      "component": "com.sec.android.app.myfiles.external.ui.LaunchActivity",
+      "asset": "helix_files"
+    },
+    {
+      "package_name": "com.sec.android.app.myfiles",
+      "component": "com.sec.android.app.myfiles.common.MainActivity",
+      "asset": "helix_files"
+    },
+    {
+      "package_name": "com.android.settings",
+      "component": "com.android.settings.Settings",
+      "asset": "helix_settings"
+    },
+    {
+      "package_name": "com.android.chrome",
+      "component": "com.google.android.apps.chrome.Main",
+      "asset": "helix_chrome"
+    },
+    {
+      "package_name": "com.android.chrome",
+      "component": "com.android.chrome.Main",
+      "asset": "helix_chrome"
+    },
+    {
+      "package_name": "com.google.android.googlequicksearchbox",
+      "component": "com.google.android.googlequicksearchbox.SearchActivity",
+      "asset": "helix_google"
+    },
+    {
+      "package_name": "com.google.android.googlequicksearchbox",
+      "component": "com.google.android.googlequicksearchbox.GoogleSearch",
+      "asset": "helix_google"
+    },
+    {
+      "package_name": "com.android.vending",
+      "component": "com.android.vending.AssetBrowserActivity",
+      "asset": "helix_play_store"
+    },
+    {
+      "package_name": "com.android.vending",
+      "component": "com.google.android.finsky.activities.PlayLauncherActivity",
+      "asset": "helix_play_store"
+    },
+    {
+      "package_name": "com.google.android.youtube",
+      "component": "com.google.android.youtube.app.honeycomb.Shell$HomeActivity",
+      "asset": "helix_youtube"
+    },
+    {
+      "package_name": "com.google.android.youtube",
+      "component": "com.google.android.youtube.app.honeycomb.Shell",
+      "asset": "helix_youtube"
+    },
+    {
+      "package_name": "com.spotify.music",
+      "component": "com.spotify.music.MainActivity",
+      "asset": "helix_spotify"
+    },
+    {
+      "package_name": "com.spotify.music",
+      "component": "com.spotify.music.main.MainScreenActivity",
+      "asset": "helix_spotify"
+    },
+    {
+      "package_name": "com.zhiliaoapp.musically",
+      "component": "com.zhiliaoapp.musically.MainActivity",
+      "asset": "helix_tiktok"
+    },
+    {
+      "package_name": "com.zhiliaoapp.musically",
+      "component": "com.ss.android.ugc.aweme.splash.SplashActivity",
+      "asset": "helix_tiktok"
+    },
+    {
+      "package_name": "com.zhiliaoapp.musically",
+      "component": "com.ss.android.ugc.trill.splash.I18nSplashActivity",
+      "asset": "helix_tiktok"
+    },
+    {
+      "package_name": "com.zhiliaoapp.musically",
+      "component": "com.zhiliaoapp.musically.activity.SplashActivity",
+      "asset": "helix_tiktok"
+    },
+    {
+      "package_name": "com.openai.chatgpt",
+      "component": "com.openai.chatgpt.MainActivity",
+      "asset": "helix_chatgpt"
+    },
+    {
+      "package_name": "com.google.android.apps.bard",
+      "component": "com.google.android.apps.bard.shellapp.BardEntryPointActivity",
+      "asset": "helix_gemini"
+    },
+    {
+      "package_name": "com.microsoft.office.outlook",
+      "component": "com.microsoft.office.outlook.MainActivity",
+      "asset": "helix_outlook"
+    },
+    {
+      "package_name": "com.microsoft.office.outlook",
+      "component": "com.microsoft.office.outlook.ui.miit.MiitLauncherActivity",
+      "asset": "helix_outlook"
+    },
+    {
+      "package_name": "com.google.android.gm",
+      "component": "com.google.android.gm.ConversationListActivityGmail",
+      "asset": "helix_gmail"
+    },
+    {
+      "package_name": "com.google.android.apps.docs",
+      "component": "com.google.android.apps.docs.app.NewMainProxyActivity",
+      "asset": "helix_drive"
+    },
+    {
+      "package_name": "com.google.android.apps.docs",
+      "component": "com.google.android.apps.docs.app.HomeScreenActivity",
+      "asset": "helix_drive"
+    },
+    {
+      "package_name": "com.google.android.apps.docs",
+      "component": "com.google.android.apps.docs.app.MainProxyActivity",
+      "asset": "helix_drive"
+    },
+    {
+      "package_name": "com.google.android.apps.photos",
+      "component": "com.google.android.apps.photos.home.HomeActivity",
+      "asset": "helix_photos"
+    },
+    {
+      "package_name": "com.google.android.apps.maps",
+      "component": "com.google.android.maps.MapsActivity",
+      "asset": "helix_maps"
+    },
+    {
+      "package_name": "com.google.android.videos",
+      "component": "com.google.android.videos.activity.HomeActivity",
+      "asset": "helix_google_tv"
+    },
+    {
+      "package_name": "com.google.android.videos",
+      "component": "com.google.android.videos.activity.LauncherActivity",
+      "asset": "helix_google_tv"
+    },
+    {
+      "package_name": "com.google.android.videos",
+      "component": "com.google.android.youtube.videos.EntryPoint",
+      "asset": "helix_google_tv"
+    },
+    {
+      "package_name": "com.shazam.android",
+      "component": "com.shazam.android.activities.SplashActivity",
+      "asset": "helix_shazam"
+    },
+    {
+      "package_name": "com.shazam.android",
+      "component": "com.shazam.android.activities.MainActivity",
+      "asset": "helix_shazam"
+    },
+    {
+      "package_name": "com.google.android.apps.youtube.music",
+      "component": "com.google.android.apps.youtube.music.activities.MusicActivity",
+      "asset": "helix_youtube_music"
+    },
+    {
+      "package_name": "com.samsung.android.app.notes",
+      "component": "com.samsung.android.app.notes.memolist.MemoListActivity",
+      "asset": "helix_samsung_notes"
+    },
+    {
+      "package_name": "com.sec.android.app.clockpackage",
+      "component": "com.sec.android.app.clockpackage.ClockPackage",
+      "asset": "helix_clock"
+    },
+    {
+      "package_name": "com.sec.android.app.clockpackage",
+      "component": "com.sec.android.app.clockpackage.common.activity.ClockPackage",
+      "asset": "helix_clock"
+    },
+    {
+      "package_name": "com.sec.android.app.popupcalculator",
+      "component": "com.sec.android.app.popupcalculator.Calculator",
+      "asset": "helix_calculator"
+    },
+    {
+      "package_name": "com.samsung.android.bixby.agent",
+      "component": "com.samsung.android.bixby.assistanthome.AssistantHomeLauncherActivity",
+      "asset": "helix_bixby"
+    },
+    {
+      "package_name": "com.samsung.android.bixby.agent",
+      "component": "com.samsung.android.bixby.assistanthome.AssistantHomeMainActivity",
+      "asset": "helix_bixby"
+    },
+    {
+      "package_name": "com.sec.android.app.shealth",
+      "component": "com.samsung.android.app.shealth.home.HomeMainActivity",
+      "asset": "helix_samsung_health"
+    },
+    {
+      "package_name": "com.sec.android.app.shealth",
+      "component": "com.samsung.android.app.shealth.home.HomeDashboardActivity",
+      "asset": "helix_samsung_health"
+    },
+    {
+      "package_name": "com.sec.android.app.samsungapps",
+      "component": "com.sec.android.app.samsungapps.SamsungAppsMainActivity",
+      "asset": "helix_galaxy_store"
+    },
+    {
+      "package_name": "com.sec.android.app.samsungapps",
+      "component": "com.sec.android.app.samsungapps.Main",
+      "asset": "helix_galaxy_store"
+    },
+    {
+      "package_name": "com.sec.android.app.samsungapps",
+      "component": "com.sec.android.app.samsungapps.SKSamsungMainActivity",
+      "asset": "helix_galaxy_store"
+    },
+    {
+      "package_name": "com.samsung.android.goodlock",
+      "component": "com.samsung.android.goodlock.MainActivity",
+      "asset": "helix_good_lock"
+    },
+    {
+      "package_name": "com.samsung.android.goodlock",
+      "component": "com.samsung.android.goodlock.presentation.view.LaunchActivity",
+      "asset": "helix_good_lock"
+    },
+    {
+      "package_name": "com.samsung.android.goodlock",
+      "component": "com.samsung.android.goodlock.presentation.view.PluginListActivity",
+      "asset": "helix_good_lock"
+    },
+    {
+      "package_name": "com.samsung.android.voc",
+      "component": "com.samsung.android.voc.app.LauncherActivity",
+      "asset": "helix_samsung_members"
+    },
+    {
+      "package_name": "com.samsung.android.voc",
+      "component": "com.samsung.android.voc.MainActivity",
+      "asset": "helix_samsung_members"
+    },
+    {
+      "package_name": "com.samsung.android.voc",
+      "component": "com.samsung.android.voc.LauncherActivity",
+      "asset": "helix_samsung_members"
+    },
+    {
+      "package_name": "com.google.android.apps.tachyon",
+      "component": "com.google.android.apps.tachyon.MainActivitySecondLauncher",
+      "asset": "helix_meet"
+    },
+    {
+      "package_name": "com.google.android.apps.tachyon",
+      "component": "com.google.android.apps.tachyon.MainActivity",
+      "asset": "helix_meet"
+    },
+    {
+      "package_name": "org.videolan.vlc",
+      "component": "org.videolan.vlc.StartActivity",
+      "asset": "helix_vlc"
+    },
+    {
+      "package_name": "org.videolan.vlc",
+      "component": "org.videolan.vlc.gui.MainActivity",
+      "asset": "helix_vlc"
+    },
+    {
+      "package_name": "com.linkedin.android",
+      "component": "com.linkedin.android.authenticator.LaunchActivity",
+      "asset": "helix_linkedin"
+    },
+    {
+      "package_name": "com.linkedin.android",
+      "component": "com.linkedin.android.authenticator.LaunchActivityDefault",
+      "asset": "helix_linkedin"
+    },
+    {
+      "package_name": "com.linkedin.android",
+      "component": "com.linkedin.android.MainActivity",
+      "asset": "helix_linkedin"
+    },
+    {
+      "package_name": "com.amazon.dee.app",
+      "component": "com.amazon.dee.app.Launcher",
+      "asset": "helix_alexa"
+    },
+    {
+      "package_name": "com.amazon.dee.app",
+      "component": "com.amazon.dee.webapp.activity.AlexaWebAppActivity",
+      "asset": "helix_alexa"
+    },
+    {
+      "package_name": "fr.leboncoin",
+      "component": "fr.leboncoin.feature.splashscreen.ui.activities.SplashScreenActivity",
+      "asset": "helix_leboncoin"
+    },
+    {
+      "package_name": "fr.leboncoin",
+      "component": "fr.leboncoin.ui.activities.SplashScreenActivity",
+      "asset": "helix_leboncoin"
+    },
+    {
+      "package_name": "fr.leboncoin",
+      "component": "fr.leboncoin.splashscreen.ui.activities.SplashScreenActivity",
+      "asset": "helix_leboncoin"
+    },
+    {
+      "package_name": "fr.leboncoin",
+      "component": "fr.leboncoin.features.splashscreen.ui.activities.SplashScreenActivity",
+      "asset": "helix_leboncoin"
+    },
+    {
+      "package_name": "ginlemon.iconpackstudio",
+      "component": "ginlemon.iconpackstudio.editor.homeActivity.HomeActivity",
+      "asset": "helix_icon_pack_studio"
+    }
+  ],
+  "excluded_unverified": [
+    {
+      "package_name": "com.samsung.android.messaging",
+      "component": "com.samsung.android.messaging.ui.view.main.WithActivity",
+      "reason": "Initial pilot candidate not corroborated; confirm on S24 before restoring"
+    }
+  ]
+}

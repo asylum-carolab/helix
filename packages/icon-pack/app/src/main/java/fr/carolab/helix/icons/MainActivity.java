@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
                             .add(component.flattenToString());
                 }
             }
-            // Exercise actual resource resolution, including the five drawable aliases.
+            // Exercise actual resource resolution, including all 38 PNG drawables.
             for (String name : getResources().getStringArray(R.array.icon_pack)) {
                 int id = getResources().getIdentifier(name, "drawable", getPackageName());
                 if (id == 0 || getDrawable(id) == null) throw new IllegalStateException("Missing drawable: " + name);

@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <category title="HELIX Pilot"/>
+    <category title="HELIX — 38 icônes"/>
     <item drawable="helix_phone"/>
     <item drawable="helix_messages"/>
+    <item drawable="helix_contacts"/>
+    <item drawable="helix_calendar"/>
     <item drawable="helix_camera"/>
+    <item drawable="helix_gallery"/>
+    <item drawable="helix_files"/>
+    <item drawable="helix_settings"/>
     <item drawable="helix_chrome"/>
+    <item drawable="helix_google"/>
+    <item drawable="helix_play_store"/>
+    <item drawable="helix_youtube"/>
+    <item drawable="helix_spotify"/>
+    <item drawable="helix_tiktok"/>
+    <item drawable="helix_chatgpt"/>
+    <item drawable="helix_gemini"/>
+    <item drawable="helix_outlook"/>
     <item drawable="helix_gmail"/>
+    <item drawable="helix_drive"/>
+    <item drawable="helix_photos"/>
+    <item drawable="helix_maps"/>
+    <item drawable="helix_google_tv"/>
+    <item drawable="helix_shazam"/>
+    <item drawable="helix_youtube_music"/>
+    <item drawable="helix_samsung_notes"/>
+    <item drawable="helix_clock"/>
+    <item drawable="helix_calculator"/>
+    <item drawable="helix_bixby"/>
+    <item drawable="helix_samsung_health"/>
+    <item drawable="helix_galaxy_store"/>
+    <item drawable="helix_good_lock"/>
+    <item drawable="helix_samsung_members"/>
+    <item drawable="helix_meet"/>
+    <item drawable="helix_vlc"/>
+    <item drawable="helix_linkedin"/>
+    <item drawable="helix_alexa"/>
+    <item drawable="helix_leboncoin"/>
+    <item drawable="helix_icon_pack_studio"/>
 </resources>

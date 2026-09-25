@@ -1,118 +1,133 @@
-# HELIX Icon Pack — pilote HELIX-ICONS02
+# HELIX Icon Pack — ICONS01, 38 icônes
 
-## Portée et statut
+Application existante : `fr.carolab.helix.icons`, version **0.2.0-icons01**, code **2**. Le projet Gradle/Android du pilote est réutilisé. **Studio création et Bus Traffic Fever! sont exclus de cette version à la demande de l’utilisatrice** : aucune ressource Android et aucun mapping pour ces deux applications.
 
-Pilote de compatibilité pour le Samsung Galaxy S24, application `fr.carolab.helix.icons`, version `0.1.0-pilot` (code 1). Seulement cinq applications : Samsung Téléphone, Samsung Messages, Samsung Appareil photo, Google Chrome et Gmail. Elles utilisent volontairement le même dessin temporaire HELIX « H ». Aucun catalogue complet ni nouveau visuel final.
+La grille approuvée sert de source de pixels, pas de prétexte à redessiner les logos. Les 38 pictogrammes ont été extraits, dimensionnés et centrés individuellement, puis composés dans un cadre HELIX commun noir/anthracite, néon cyan/bleu, accent orange inférieur. Aucun générateur d’images ni nouveau dessin n’a été utilisé.
 
-**Validation physique S24 en attente.** La compilation et les contrôles d’APK ne prouvent pas la détection par Theme Park, les cinq associations sur le téléphone ou la stabilité de One UI Home. Ne pas étendre le catalogue avant ce test.
+## Fichiers graphiques et contrôle visuel
 
-## Construire
+- `app/src/main/res/drawable-nodpi/helix_*.png` : 38 PNG RGBA 512 × 512, sans légende, intégrés à l’APK.
+- `../../icons/helix-icons01/reference-grid.png` (depuis le projet Android) : copie intacte de la maquette source ; elle contient encore les deux cases exclues, uniquement comme référence historique.
+- `icons/helix-icons01/frame-master.png` depuis la racine du dépôt : cadre commun, extrait du cadre Téléphone. La plaque sombre intérieure est nettoyée à partir de pixels sombres des cases alignées pour retirer le pictogramme initial.
+- `icons/helix-icons01/artwork-layout.json` : rectangle source, échelle proportionnelle, décalage et rectangle de sortie de chaque pictogramme.
+- `icons/helix-icons01/contact-sheet.png` et `review-preview.png` : planches des **38** résultats, examinées côte à côte.
+- `icons/helix-icons01/artwork-checks.json` : empreintes des PNG, vérification du cadre identique, des coins transparents, des marges et de l’unicité des 38 images.
 
-Prérequis : JDK 17, Android SDK avec `platforms;android-35` et `build-tools;34.0.0`. `platform-tools` est utile pour ADB. Installer ces composants avec Android Studio ou `sdkmanager`, en acceptant les licences Android SDK. Définir `JAVA_HOME` et `ANDROID_HOME`, ou renseigner `sdk.dir` dans `packages/icon-pack/local.properties` (non versionné).
+La seconde passe corrige le bord supérieur de Photos et rééquilibre Maps, YouTube et Google TV. Les formes fines comme Horloge, ChatGPT et Gemini occupent davantage d’espace que les blocs compacts ; aucun logo n’est étiré. Le cadre extérieur est identique pixel pour pixel pour les 38 ressources. La source étant une grille 1536 × 1024, les PNG 512 × 512 sont des agrandissements interpolés des pixels extraits, pas des originaux HD réinventés.
 
-Versions de compilation fixées : Android Gradle Plugin 8.7.3, Gradle 8.9, API de compilation/cible 35, Build Tools 34.0.0, Java 17. Android minimum : API 26. Aucune dépendance d’exécution tierce, aucune permission Android, aucun réseau dans l’application.
+Reproduire la préparation, depuis `packages/icon-pack`, avec Python, Pillow et NumPy :
+
+```sh
+python tools/prepare_artwork.py ../../icons/helix-icons01/reference-grid.png
+python tools/verify_artwork.py
+python tools/sync_resources.py
+```
+
+Ces étapes ne sont pas requises pour compiler : les PNG et XML sont versionnés. Les paramètres optiques individuels se trouvent dans `tools/prepare_artwork.py` et leur résultat dans `artwork-layout.json`.
+
+## Catalogue et mappings
+
+`catalog.json` recense les 38 ressources dans l’ordre de la maquette, en sautant les deux exclusions. `app-map.csv` contient **76 composants pour 38 applications**. Les mappings historiques corrects de Téléphone, Appareil photo, Chrome et Gmail sont conservés, ainsi que l’alias Samsung Messages `com.android.mms.ui.ConversationComposer`. Deux autres alias Messages corroborés sont inclus.
+
+Chaque composant actif a été recoupé dans le [catalogue source public Arcticons](https://github.com/Arcticons-Team/Arcticons/blob/main/app/src/main/res/xml/appfilter.xml), consulté le 25 septembre 2026. La source, son empreinte SHA-256 et la liste exacte des composants corroborés sont conservées dans `mapping-evidence.json`. Les variantes retenues restent limitées aux applications demandées ; les composants de mods, de TV, d’archivage Android ou de réglages annexes ont été écartés.
+
+**À confirmer sur le S24 :** le composant réellement utilisé pour chaque version installée, notamment les alias Samsung, le lanceur LinkedIn, Google TV et leboncoin. Aucune correspondance n’est annoncée testée physiquement. L’ancien candidat Messages `com.samsung.android.messaging.ui.view.main.WithActivity`, non corroboré, est documenté dans `mapping-evidence.json` et retiré de l’appfilter actif ; ne le rétablir qu’après lecture sur le téléphone. Aucun nom de paquet ou composant non vérifié n’est ajouté silencieusement.
+
+Samsung Messages désigne `com.samsung.android.messaging`, pas Google Messages. Meet cible `com.google.android.apps.tachyon`, pas une autre application portant un nom voisin. Calendrier conserve le **31 statique** du dessin approuvé : aucun calendrier dynamique n’est ajouté.
+
+Les deux appfilters (`assets/` et `res/xml/`), les deux catalogues `drawable.xml`, le tableau `icon_pack` et les déclarations de visibilité du manifeste sont synchronisés. Les cinq anciens alias vers l’icône H sont remplacés par de vrais PNG. Le label **HELIX Icon Pack**, l’activité de lancement et les filtres de découverte ADW/Nova sont conservés. Aucune permission Android et aucune dépendance d’exécution tierce ne sont ajoutées. Le pack ne fait aucun appel réseau.
+
+L’écran du pack affiche les composants de lancement visibles des 38 applications et signale les correspondances absentes. Une application absente/désactivée reste non testée. Cette vérification locale ne démontre pas la compatibilité Theme Park.
+
+| Application | Ressource PNG | Composants |
+| --- | --- | --- |
+| Téléphone | helix_phone | 1 |
+| Messages | helix_messages | 3 |
+| Contacts | helix_contacts | 2 |
+| Calendrier | helix_calendar | 2 |
+| Appareil photo | helix_camera | 1 |
+| Galerie | helix_gallery | 2 |
+| Mes fichiers | helix_files | 3 |
+| Paramètres | helix_settings | 1 |
+| Chrome | helix_chrome | 2 |
+| Google | helix_google | 2 |
+| Play Store | helix_play_store | 2 |
+| YouTube | helix_youtube | 2 |
+| Spotify | helix_spotify | 2 |
+| TikTok | helix_tiktok | 4 |
+| ChatGPT | helix_chatgpt | 1 |
+| Gemini | helix_gemini | 1 |
+| Outlook | helix_outlook | 2 |
+| Gmail | helix_gmail | 1 |
+| Drive | helix_drive | 3 |
+| Photos | helix_photos | 1 |
+| Maps | helix_maps | 1 |
+| Google TV | helix_google_tv | 3 |
+| Shazam | helix_shazam | 2 |
+| YouTube Music | helix_youtube_music | 1 |
+| Samsung Notes | helix_samsung_notes | 1 |
+| Horloge | helix_clock | 2 |
+| Calculatrice | helix_calculator | 1 |
+| Bixby | helix_bixby | 2 |
+| Samsung Health | helix_samsung_health | 2 |
+| Galaxy Store | helix_galaxy_store | 3 |
+| Good Lock | helix_good_lock | 3 |
+| Samsung Members | helix_samsung_members | 3 |
+| Meet | helix_meet | 2 |
+| VLC | helix_vlc | 2 |
+| LinkedIn | helix_linkedin | 3 |
+| Amazon Alexa | helix_alexa | 2 |
+| leboncoin | helix_leboncoin | 4 |
+| Icon Pack Studio | helix_icon_pack_studio | 1 |
+
+## Construire et récupérer l’APK
+
+Prérequis : JDK 17, Android SDK API 35 et Build Tools 34.0.0. Définir `JAVA_HOME` et `ANDROID_HOME`, ou fournir `sdk.dir` dans `local.properties` (non versionné). Le wrapper inclus fixe Gradle 8.9 et vérifie sa distribution par SHA-256 ; Android Gradle Plugin reste à 8.7.3. Cible Android 35, minimum 26.
 
 Depuis `packages/icon-pack` :
 
 ```sh
-./gradlew assembleDebug lintDebug
+./gradlew assembleDebug lintDebug --no-daemon --console=plain
 ```
 
-Sous Windows PowerShell :
-
-```powershell
-.\gradlew.bat assembleDebug lintDebug
-```
-
-Le wrapper est inclus et contrôle le SHA-256 de la distribution Gradle. La première compilation télécharge les outils Gradle et les dépendances de compilation Google/Maven ; elle nécessite Internet.
-
-`verifyPilotResources`, exécuté avant la compilation, vérifie les cinq applications, l’unicité des composants, la cohérence CSV/appfilters/catalogues, les alias du dessin temporaire et l’absence de permissions. Il est aussi exécutable seul : `./gradlew verifyPilotResources`.
-
-Sorties, relatives à la racine du dépôt :
-
-- `packages/icon-pack/app/build/outputs/apk/debug/app-debug.apk` : sortie Gradle conservée localement, non versionnée ;
-- `packages/HELIX-Icon-Pack-PILOT.apk` : copie automatique après `assembleDebug` réussi, destinée à l’installation et versionnée ;
-- `packages/icon-pack/app/build/reports/lint-results-debug.html` : rapport Lint local.
-
-L’APK debug est signé automatiquement avec la clé de test locale Android. La compilation est reproductible avec les versions ci-dessus ; les APK issus de machines différentes ne sont pas forcément identiques octet pour octet, notamment à cause de cette clé. Ne pas publier de clé privée. Une mise à jour Android doit utiliser la même clé ; si un autre build est déjà installé avec une signature différente, désinstaller l’ancien **HELIX Icon Pack** avant d’installer ce pilote. Ce n’est pas une version de production signée pour distribution en boutique.
-
-## Vérifications de ce build
-
-Compilation exécutée le 24 septembre 2026 sous Windows avec JDK 17.0.20.1 :
+Sous Windows :
 
 ```powershell
 .\gradlew.bat assembleDebug lintDebug --no-daemon --console=plain
 ```
 
-Résultat : **BUILD SUCCESSFUL**, 45 tâches exécutées. Lint : 0 erreur, 8 avertissements examinés (ressources découvertes par nom considérées inutilisées, recherche de ressource par nom et règle de sauvegarde Android 12 ; le pilote ne stocke aucune donnée). `apksigner verify --verbose --print-certs` confirme la signature debug v2. `aapt dump badging`, `dump permissions` et `dump resources` confirment l’identifiant, la cible API 35, le minimum API 26, l’activité de lancement, les cinq alias et l’absence de permissions.
+La première compilation nécessite Internet pour les outils de compilation ; `--offline` fonctionne ensuite avec le cache déjà rempli. `verifyIconResources` s’exécute automatiquement avant le build : 38 PNG RGBA 512 × 512, catalogue complet, unicité des composants, justificatif de chaque mapping, cohérence des XML, visibilité des 38 paquets et absence de permissions.
 
-APK : 16 338 octets. SHA-256 : `d7299fd7f282bd64155e2b911975c2454e7cfb8e4ff2c646afd5bd457b55c09e`. La copie dans `packages/` est identique à la sortie Gradle. Installation/exécution et tests Theme Park sur le S24 : **non effectués**.
+Chemins relatifs à la racine du dépôt :
 
-## Structure et correspondances
+- **Nouvel APK : `packages/HELIX-Icon-Pack-ICONS01-38.apk`** ; export automatique uniquement après assemblage réussi.
+- Sortie Gradle conservée : `packages/icon-pack/app/build/outputs/apk/debug/app-debug.apk`.
+- Rapport Lint local : `packages/icon-pack/app/build/reports/lint-results-debug.html`.
+- **Pilote préservé : `packages/HELIX-Icon-Pack-PILOT.apk`**, inchangé. SHA-256 : `d7299fd7f282bd64155e2b911975c2454e7cfb8e4ff2c646afd5bd457b55c09e`.
 
-- `app-map.csv` recense les composants ciblés ; plusieurs lignes peuvent concerner la même application.
-- `app/src/main/res/xml/appfilter.xml` et `app/src/main/assets/appfilter.xml` contiennent les mêmes entrées `ComponentInfo{package/classe.complete}`.
-- `res/values/drawables.xml` expose cinq alias vers le vecteur existant `res/drawable/helix_pack.xml`.
-- `res/values/iconpack.xml` fournit le tableau `icon_pack` ; `res/xml/drawable.xml` et `assets/drawable.xml` fournissent le catalogue standard.
-- L’activité exportée possède les filtres de découverte ADW/ActivityStarter/Nova et un filtre de lancement Android. Le nom visible reste **HELIX Icon Pack**.
-- L’écran du pilote lit les ressources et affiche les activités de lancement réellement visibles des cinq applications, avec leur présence ou absence dans l’appfilter. Les déclarations `queries` sont limitées à ces cinq paquets ; ce ne sont pas des permissions. Cette vérification locale ne teste pas Theme Park.
+L’APK ICONS01 reste un APK de test signé avec la même clé debug locale que le pilote. Il peut remplacer ce pilote sur le téléphone avec `adb install -r` ; le fichier pilote dans Git reste intact. Ce n’est pas une signature de production pour boutique. Sur une autre machine, une clé debug différente produit une signature différente ; une installation existante ne peut être mise à jour qu’avec sa clé de signature. Aucune clé privée n’est versionnée.
 
-| Application | Paquet | Activité candidate |
-| --- | --- | --- |
-| Samsung Téléphone | `com.samsung.android.dialer` | `com.samsung.android.dialer.DialtactsActivity` |
-| Samsung Messages | `com.samsung.android.messaging` | `com.android.mms.ui.ConversationComposer` |
-| Samsung Messages | `com.samsung.android.messaging` | `com.samsung.android.messaging.ui.view.main.WithActivity` (candidat initial conservé, non corroboré) |
-| Samsung Appareil photo | `com.sec.android.app.camera` | `com.sec.android.app.camera.Camera` |
-| Google Chrome | `com.android.chrome` | `com.google.android.apps.chrome.Main` |
-| Gmail | `com.google.android.gm` | `com.google.android.gm.ConversationListActivityGmail` |
+## Installation et test Galaxy S24
 
-Les cinq composants principaux, dont l’alias Messages `ConversationComposer`, ont été recoupés dans le [catalogue source Arcticons](https://github.com/Arcticons-Team/Arcticons/blob/main/app/src/main/res/xml/appfilter.xml). Ce recoupement ne remplace pas l’inspection du S24 : versions One UI, activités alias et applications installées peuvent varier. Samsung Messages et Google Messages sont des applications différentes ; Google Messages ne fait pas partie de ce pilote.
+**La compilation ne valide pas Theme Park. L’installation et l’application sur le S24 physique restent à effectuer.**
 
-Références de structure : [standard de packs ADW documenté par Lawnchair](https://github.com/LawnchairLauncher/docs/blob/main/developers/concepts/icon-packs.md), [exemple officiel Nova](https://github.com/teslacoil/Example_NovaTheme), [compatibilité AGP 8.7](https://developer.android.com/build/releases/agp-8-7-0-release-notes). Aucune spécification publique Samsung examinée ne permet de certifier le comportement de cette version de Theme Park sans essai physique.
+1. Transférer `HELIX-Icon-Pack-ICONS01-38.apk` sur le téléphone et l’ouvrir avec Mes fichiers ; autoriser cette source si Android le demande. Ou exécuter `adb install -r packages/HELIX-Icon-Pack-ICONS01-38.apk` depuis la racine du dépôt, avec le débogage USB autorisé.
+2. Ouvrir **HELIX Icon Pack** et noter les composants signalés sans correspondance. Vérifier que les applications attendues sont présentes et activées.
+3. Ouvrir **Good Lock → Theme Park → Icon / Icône → Create new / Créer → Iconpack / Pack d’icônes → Third Party Icon Packs → HELIX Icon Pack**. Les libellés peuvent varier selon la version.
+4. Sélectionner le pack, vérifier les associations automatiques dans l’aperçu, enregistrer/installer un nouveau thème nommé par exemple `HELIX ICONS01`, puis choisir **Apply / Appliquer**.
+5. Vérifier les icônes sur l’accueil et dans le tiroir, puis ouvrir les applications. Ne pas affecter les icônes individuellement pour masquer une absence de mapping.
+6. Fermer/réouvrir Theme Park et One UI Home, puis redémarrer le téléphone ; vérifier la persistance du thème et l’absence de plantage. Le retour arrière consiste à réappliquer le thème d’icônes précédent/défaut.
 
-## Installer sur le Galaxy S24
-
-1. Transférer `packages/HELIX-Icon-Pack-PILOT.apk` sur le téléphone, ou télécharger le fichier brut depuis GitHub (pas la page HTML).
-2. Ouvrir l’APK dans Mes fichiers et autoriser cette source d’installation si Android le demande. Installer **HELIX Icon Pack**.
-3. Ouvrir le pack. Vérifier l’absence d’erreur de ressources et lire les cinq résultats locaux. Copier les composants signalés absents du mapping. Une application absente/désactivée doit être signalée comme non testée.
-
-Autre méthode, avec le débogage USB autorisé par le propriétaire du téléphone, depuis la racine du dépôt :
-
-```sh
-adb install -r packages/HELIX-Icon-Pack-PILOT.apk
-adb shell am start -n fr.carolab.helix.icons/.MainActivity
-```
-
-En cas de doute sur un composant, utiliser l’écran du pilote ou, en remplaçant le paquet :
+En cas d’échec de mapping, copier le composant affiché dans HELIX, ou interroger un paquet précis :
 
 ```sh
 adb shell cmd package query-activities --brief -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -p com.samsung.android.messaging
 ```
 
-Reporter le composant exact dans le CSV et les deux appfilters, puis reconstruire. Ne pas déclarer un succès en remplaçant manuellement l’icône dans Theme Park.
+Reporter le composant effectivement observé dans `app-map.csv`, documenter son origine dans `mapping-evidence.json`, régénérer les XML avec `tools/sync_resources.py`, puis reconstruire.
 
-## Test physique Theme Park
+À transmettre : modèle S24 et versions Android/One UI/Theme Park/One UI Home, version du pack/commit, installation réussie ou erreur exacte, visibilité et sélection du pack, résultat automatique par application (réussite/échec/non testée), composants problématiques, captures de l’aperçu et du résultat, persistance après redémarrage, étape de tout plantage.
 
-Les libellés peuvent varier selon la langue et la version ; relever les versions avant le test.
+## Vérification de livraison
 
-1. Noter le modèle du S24, Android, One UI, Theme Park et One UI Home, ainsi que la version du pack et le commit utilisé.
-2. Ouvrir **Samsung Good Lock → Theme Park → Icon / Icône → Create new / Créer**.
-3. Ouvrir **Iconpack / Pack d’icônes** (selon la version : bouton Icon puis Iconpack).
-4. Dans **Third Party Icon Packs**, vérifier que **HELIX Icon Pack** est présent. Faire une capture de cette liste.
-5. Sélectionner **HELIX Icon Pack**. Vérifier dans l’aperçu que Téléphone, Samsung Messages, Appareil photo, Chrome et Gmail reçoivent automatiquement l’icône H. Aucune affectation individuelle.
-6. Enregistrer/installer le thème créé avec le bouton de téléchargement/enregistrement de Theme Park et un nom identifiable, par exemple `HELIX PILOT`. Revenir à la liste des thèmes d’icônes, sélectionner ce thème puis **Apply / Appliquer** si l’application n’est pas automatique.
-7. Vérifier les cinq icônes sur l’accueil et dans le tiroir d’applications. Ouvrir chacune, revenir à l’accueil et vérifier qu’elle lance toujours la bonne application.
-8. Fermer/réouvrir Theme Park et One UI Home, puis redémarrer le téléphone. Vérifier que les icônes persistent et qu’aucun plantage ne survient. Pour revenir à l’état précédent, réappliquer le thème d’icônes précédent/défaut.
-
-## Résultats à transmettre
-
-- Modèle, versions Android/One UI/Theme Park/One UI Home, version du pack et commit.
-- Installation : réussite ou message d’erreur exact.
-- Pack visible dans Third Party Icon Packs : oui/non ; sélection possible : oui/non.
-- Association automatique, séparément : Téléphone, Samsung Messages, Appareil photo, Chrome, Gmail — réussite/échec/non testée ; confirmer qu’aucune icône n’a été assignée à la main.
-- Composants affichés par le pilote pour chaque échec et état installé/activé de l’application.
-- Application du thème, lancement des cinq apps et persistance après redémarrage : réussite/échec.
-- Plantage Theme Park ou One UI Home : oui/non, étape exacte et message éventuel.
-- Captures de la liste des packs, de l’aperçu et du résultat sur le téléphone.
-
-La compatibilité n’est validée que lorsque le pack est détecté et sélectionnable, que les cinq applications présentes sont automatiquement associées et que l’application du thème reste stable. Un résultat non testé reste non validé.
+Voir `icons/helix-icons01/BUILD-REPORT.md` pour le résultat effectif de compilation, les contrôles d’APK, les empreintes et le contrôle visuel. L’ancien état du pilote et sa procédure restent consultables au [commit pilote 2311e10](https://github.com/asylum-carolab/helix/commit/2311e100c9a1460da743c32d0fc6e4184cb78a60).
